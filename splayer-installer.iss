@@ -49,7 +49,7 @@
 ;点分十进制的正整数，除数字和英文半角句点以外不允许出现任何其他字符，
 ;否则程序无法判断版本的高低。
 #define MyAppVersion "1.0.0"
-#define MyAppPublisher "赵宇航"
+#define MyAppPublisher "wangwenx190"
 #define MyAppPublisherURL "https://github.com/wangwenx190"
 #define MyAppSupportURL "https://github.com/wangwenx190/SPlayer-Installer/wiki"
 #define MyAppUpdatesURL "https://github.com/wangwenx190/SPlayer-Installer/releases"
@@ -813,14 +813,14 @@ BEGIN
   BtnSetEvent(button_close, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_close_on_click, 1));
   button_minimize := BtnCreate(WizardForm.Handle, 933, 1, 45, 29, ExpandConstant('{tmp}\button_minimize.png'), 0, FALSE);
   BtnSetEvent(button_minimize, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_minimize_on_click, 1));
-  button_install := BtnCreate(WizardForm.Handle, 446, 231, 131, 27, ExpandConstant('{tmp}\button_install.png'), 0, FALSE);
+  button_install := BtnCreate(WizardForm.Handle, 434, 228, 156, 32, ExpandConstant('{tmp}\button_install.png'), 0, FALSE);
   BtnSetEvent(button_install, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_install_on_click, 1));
   button_browse := BtnCreate(WizardForm.Handle, 928, 491, 84, 25, ExpandConstant('{tmp}\button_browse.png'), 0, FALSE);
   BtnSetEvent(button_browse, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_browse_on_click, 1));
   BtnSetVisibility(button_browse, FALSE);
-  button_customize_setup := BtnCreate(WizardForm.Handle, 22, 405, 195, 17, ExpandConstant('{tmp}\button_customize_setup.png'), 0, FALSE);
+  button_customize_setup := BtnCreate(WizardForm.Handle, 304, 453, 151, 13, ExpandConstant('{tmp}\button_customize_setup.png'), 0, FALSE);
   BtnSetEvent(button_customize_setup, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_customize_setup_on_click, 1));
-  button_uncustomize_setup := BtnCreate(WizardForm.Handle, 22, 405, 195, 17, ExpandConstant('{tmp}\button_uncustomize_setup.png'), 0, FALSE);
+  button_uncustomize_setup := BtnCreate(WizardForm.Handle, 304, 453, 151, 13, ExpandConstant('{tmp}\button_uncustomize_setup.png'), 0, FALSE);
   BtnSetEvent(button_uncustomize_setup, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_customize_setup_on_click, 1));
   BtnSetVisibility(button_uncustomize_setup, FALSE);
   image_wizardform_label_already_installed := ImgLoad(WizardForm.Handle, ExpandConstant('{tmp}\label_already_installed.png'), 12, 520, 894, 20, FALSE, FALSE);
@@ -848,7 +848,7 @@ BEGIN
   IF (CurPageID = wpWelcome) THEN
   BEGIN
     image_wizardform_background := ImgLoad(WizardForm.Handle, ExpandConstant('{tmp}\background_wizardform_welcome.png'), 0, 0, WIZARDFORM_WIDTH_NORMAL, WIZARDFORM_HEIGHT_NORMAL, FALSE, TRUE);
-    button_wizardform_get_source_code := BtnCreate(WizardForm.Handle, 22, 442, 402, 24, ExpandConstant('{tmp}\button_get_source_code.png'), 0, FALSE);
+    button_wizardform_get_source_code := BtnCreate(WizardForm.Handle, 22, 451, 241, 15, ExpandConstant('{tmp}\button_get_source_code.png'), 0, FALSE);
     BtnSetEvent(button_wizardform_get_source_code, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_get_source_code_on_click, 1));
 #ifdef RegisteAssociations
     checkbox_setdefault := BtnCreate(WizardForm.Handle, 13, 544, 364, 20, ExpandConstant('{tmp}\checkbox_setdefault.png'), 0, TRUE);
@@ -906,7 +906,7 @@ BEGIN
     ImgSetVisibility(image_progressbar_foreground, FALSE);
     BtnSetPosition(button_minimize, 933, 1, 45, 29);
     BtnSetVisibility(button_close, TRUE);
-    button_finish := BtnCreate(WizardForm.Handle, 461, 231, 101, 27, ExpandConstant('{tmp}\button_finish.png'), 0, FALSE);
+    button_finish := BtnCreate(WizardForm.Handle, 451, 228, 120, 32, ExpandConstant('{tmp}\button_finish.png'), 0, FALSE);
     BtnSetEvent(button_finish, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_finish_on_click, 1));
     BtnSetEvent(button_close, ID_BUTTON_ON_CLICK_EVENT, WrapBtnCallback(@button_finish_on_click, 1));
     image_wizardform_background := ImgLoad(WizardForm.Handle, ExpandConstant('{tmp}\background_wizardform_finish.png'), 0, 0, WIZARDFORM_WIDTH_NORMAL, WIZARDFORM_HEIGHT_NORMAL, FALSE, TRUE);
